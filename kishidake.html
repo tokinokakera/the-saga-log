@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Saga Log - 岸岳城と波多氏</title>
+    <meta name="description" content="岸岳城を中心に、松浦党の歴史や波多氏の歩みをたどるThe Saga Logの歴史記事です。">
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="sub-page kishidake-page">
+    <div class="page-bg-base"></div>
+    <nav class="global-menu">
+      <ul class="menu-list">
+        <li><a href="index.html">TOPページ</a></li>
+        <li><a href="myth.html">1.昔聞いたあの話、実はね・・・</a></li>
+        <li><a href="ooto.html">2.鳥巣に眠る 「オオト様」とは</a></li>
+        <li><a href="kishidake.html">3.岸岳城と波多氏、消えた武士の記憶</a></li>
+        <li><a href="showa.html">4.昭和あの頃、祖父と歩いた日々</a></li>
+        <li><a href="sanpo.html">5.歴史の風を聴く史跡を巡って</a></li>
+      </ul>
+    </nav>
+
+    <section class="page-hero">
+      <header class="site-header">
+        <div class="menu-trigger">
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+
+      <img
+        src="./image/busi/kisidake-top.jpg"
+        alt="岸岳を眺めて"
+      />
+
+      <div class="page-title">
+        <h1>岸岳城と波多氏 消えた武士の記憶</h1>
+       
+       <p class="intro-lead">　かつて唐津・北部の地には、「岸岳城（きしだけじょう）」 <br>
+        という山城がありました。この城を拠点に、この一帯で大きな力を持っていたのが 
+        「波多（はた）氏」という武士の一族です。<br><br>
+
+　そのルーツを遠くたどると、平安時代の嵯峨天皇へとつながる 「嵯峨源氏」の流れが見えてきます。
+やがて波多氏は上松浦党の中心として海と陸で勢力を広げ、岸岳を舞台に栄えていきました。<br><br>
+
+　しかし、戦国の時代を迎えると大きな変化の波にのみ込まれ、名門・波多氏は歴史の表舞台から姿を消していきます。
+  これは、 嵯峨天皇から始まる遠い流れが、 <br>
+  嵯峨源氏、松浦党、波多氏へとつながり、そして終わりを迎えるまでの物語です。
+</p>
+      </div>
+      </div>
+
+      <section class="next-chapters">
+        <h2>時代をたどる</h2>
+        <p>見たい章を選んでください</p>
+        <div class="chapter-grid">
+          <!-- ファイルパスを修正 -->
+          <a href="./kishidake/chapter1.html" class="chapter-box">
+            <h3>1. 嵯峨天皇～松浦党</h3>
+            <p>波多氏のはじまり</p>
+          </a>
+          <a href="./kishidake/chapter2.html" class="chapter-box">
+            <h3>2. 松浦党と水軍</h3>
+            <p>海へ広がる勢力</p>
+          </a>
+          <a href="./kishidake/chapter3.html" class="chapter-box">
+            <h3>3. 波多氏の繁栄</h3>
+            <p>岸岳の黄金期</p>
+          </a>
+          <a href="./kishidake/chapter4.html" class="chapter-box">
+            <h3>4. 波多親～終焉</h3>
+            <p>歴史の転換点</p>
+          </a>
+        </div>
+      </section>
+    </section>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <p class="copyright">&copy; 2026 The Saga Log. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <a href="#" class="to-top-btn">▲ TOPに戻る</a>
+
+    <script>
+      var menuTrigger = document.querySelector(".menu-trigger");
+      var globalMenu = document.querySelector(".global-menu");
+
+      if (menuTrigger && globalMenu) {
+        menuTrigger.addEventListener("click", function () {
+          menuTrigger.classList.toggle("active");
+          globalMenu.classList.toggle("active");
+        });
+      }
+
+      var topBtn = document.querySelector(".to-top-btn");
+      if (topBtn) {
+        topBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          if (menuTrigger && globalMenu) {
+            menuTrigger.classList.remove("active");
+            globalMenu.classList.remove("active");
+          }
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+    </script>
+  </body>
+</html>

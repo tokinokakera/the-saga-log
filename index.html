@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+ <!-- Google検索用 -->
+<title>The Saga Log</title>
+<meta name="description" content="The Saga Logは、佐賀や大宰府の歴史、岸岳城と松浦党、地域に残る昔話、歴史散歩、昭和の記憶を通して、時代の物語を綴る歴史サイトです。">
+
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet" /><style>
+    /* ■ 背景画像の設定 */
+    .top-page-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: -2;
+    }
+
+    .top-page-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .top-visual {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .top-overlay {
+      position: absolute;
+      top: 38%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 100%;
+      z-index: 5;
+    }
+
+    @keyframes fadeInSchu {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+    }
+
+    /* ===================================================
+       ■ スマホ用（デフォルト）：12秒動画に合わせた早いタイミング
+       =================================================== */
+    body.top-page .top-text-group {
+      opacity: 0;
+      animation: fadeInSchu 2s forwards 13s;
+    }
+
+    body.top-page .menu-trigger {
+      animation: menuFadeIn26s 1s forwards 14s;
+    }
+
+    body.top-page .to-top-btn {
+      animation: fadeInBtn 1s forwards;
+      animation-delay: 11.5s;
+    }
+
+    body.top-page .scroll-guide {
+      animation: fadeInGuide 1s forwards 11s, floatGuide 2.5s ease-in-out infinite 14s;
+    }
+
+
+    /* ===================================================
+       ■ パソコン用（画面幅768px以上）：元通りの遅いタイミング
+       =================================================== */
+    @media (min-width: 768px) {
+      body.top-page .top-text-group {
+        opacity: 0;
+        animation: fadeInSchu 8s forwards 22s;
+      }
+
+      body.top-page .menu-trigger {
+        animation: menuFadeIn26s 2s forwards 26s;
+      }
+
+      body.top-page .to-top-btn {
+        animation: fadeInBtn 1s forwards;
+        animation-delay: 27s;
+      }
+
+      body.top-page .scroll-guide {
+        animation: fadeInGuide 2s forwards 26s, floatGuide 2.5s ease-in-out infinite 28s;
+      }
+    }
+  </style>
+</head>
+
+<body class="top-page">
+  <a href="#" class="to-top-btn">▲ TOPに戻る</a>
+  <nav class="global-menu">
+    <ul class="menu-list">
+      <li><a href="myth.html">1.昔し聞いたあの話</a></li>
+      <li><a href="ooto.html">2.鳥巣に眠る「オオト様」とは</a></li>
+      <li><a href="kishidake.html">3.岸岳城と波多氏、消えた武士の記憶</a></li>
+      <li><a href="showa.html">4.昭和あの頃、祖父と歩いた日々</a></li>
+      <li><a href="sanpo.html">5.歴史の風を聴く史跡を巡って</a></li>
+    </ul>
+  </nav>
+  <header class="site-header">
+    <div class="menu-trigger">
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- パソコン用動画（22秒〜26秒用） -->
+  <video class="bg-video pc-only" src="./image/top-silyoukai/opening.mp4" autoplay muted playsinline></video>
+  <!-- スマホ用動画（12秒用）※ファイル名は実際のスマホ用動画名に合わせてください -->
+  <video class="bg-video sp-only" src="./image/top-silyoukai/sumaho1.mp4" autoplay muted playsinline></video>
+
+  <section class="top-visual"></section>
+
+  <div class="top-overlay">
+    <div class="top-text-group">
+      <h1 class="top-title-en">The Saga Log</h1>
+      <div class="top-line-separator"></div>
+      <p class="top-title-jp">時の欠片を拾い集めて</p>
+    </div>
+    <div class="scroll-guide">
+      <span>SCROLL</span>
+    </div>
+  </div>
+
+  <section class="second-page-container">
+    <div class="arc-wrapper" style="background-image: url(&quot;./image/top-bg.jpg&quot;)">
+      <div class="story-content">
+        <div class="story-heading-group">
+          <h2 class="story-title-en">The Saga Log</h2>
+        </div>
+        <div class="story-description">
+          <br>
+          <p>
+            「Saga」という言葉には、物語という意味があります。<br />
+            旅の途中で出会う、名もなき風景。<br />
+            日常に漂う「時の欠片」を拾い集めて。
+          </p>
+          <p>
+            ここは、風化していく名もなき景色たちの呼吸を、<br />
+            あなたの記憶の隅にそっと繋ぎ止めておくための、<br />
+            静かな記録の場所（Log）です。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="log-section">
+    <div class="log-block">
+      <div class="log-text">
+        <a href="myth.html"><img src="./image/top-silyoukai/2x/myth.png" alt="昔話紹介文" /></a>
+      </div>
+      <div class="log-media">
+        <a href="myth.html"><img src="./image/top-silyoukai/otomo.png" alt="昔話イメージ画像" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="log-section">
+    <div class="log-block row-reverse">
+      <div class="log-media">
+        <a href="ooto.html"><img src="./image/top-silyoukai/ooto-top.png" alt="オオト様イメージ画像" /></a>
+      </div>
+      <div class="log-text">
+        <a href="ooto.html"><img src="./image/top-silyoukai/2x/ooto.png" alt="オオト様紹介文" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="log-section">
+    <div class="log-block">
+      <div class="log-text">
+        <a href="kishidake.html"><img src="./image/top-silyoukai/2x/kisidake.png" alt="岸岳と波多氏紹介文" /></a>
+      </div>
+      <div class="log-media">
+        <a href="kishidake.html"><img src="./image/top-silyoukai/kisidake-top.png" alt="岸岳と波多氏イメージ画像" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="log-section">
+    <div class="log-block">
+      <div class="content-main">
+        <a href="showa.html"><img src="./image/top-silyoukai/top.png" alt="昭和あの頃イメージ画像" /></a>
+      </div>
+      <div class="content-sub">
+        <a href="showa.html"><img src="./image/top-silyoukai/2x/showa.png" alt="昭和あの頃紹介文" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="log-section">
+    <div class="log-block">
+      <div class="gallery-large">
+        <a href="sanpo.html"><img src="./image/top-silyoukai/2x/sanpo.png" alt="歴史散歩紹介文" /></a>
+      </div>
+      <div class="gallery-thumb">
+        <a href="sanpo.html"><img src="./image/top-silyoukai/sanpo-top.png" alt="歴史散歩イメージ画像" /></a>
+      </div>
+    </div>
+  </section>
+  <!-- ★ ここに「更新情報」セクションを入れる -->
+  <section class="news">
+    <h2>更新情報</h2>
+    <p>
+      【サイト公開】 2026年8月7日 にサイトをオープンしました。
+      新しい記事や更新情報は、下記にてお知らせいたします。
+    </p>
+
+    <ul class="news-list">
+      <li></li>
+    </ul>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSctAhuqQTCR8l1HyKksbBrqrMtIfIbyeySPfxfxxpP1K0Y66A/viewform"
+          target="_blank">
+          ご意見・お問い合わせ
+        </a>
+      </p>
+
+      <p class="copyright">&copy; 2026 The Saga Log. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var videoPc = document.querySelector(".bg-video.pc-only");
+      var videoSp = document.querySelector(".bg-video.sp-only");
+      var textGroup = document.querySelector(".top-text-group");
+      var menuTrigger = document.querySelector(".menu-trigger");
+      var topBtn = document.querySelector(".to-top-btn");
+      var scrollGuide = document.querySelector(".scroll-guide");
+      var secondPage = document.querySelector(".second-page-container");
+
+      var hasOpened = sessionStorage.getItem("hasOpened");
+
+      // =========================
+      // 2回目以降
+      // =========================
+      if (hasOpened) {
+        if (videoPc) { videoPc.style.opacity = "0"; videoPc.style.pointerEvents = "none"; }
+        if (videoSp) { videoSp.style.opacity = "0"; videoSp.style.pointerEvents = "none"; }
+
+        document.body.style.paddingTop = "0";
+
+        if (secondPage) { secondPage.style.marginTop = "0"; }
+        if (textGroup) { textGroup.style.opacity = "1"; textGroup.style.animation = "none"; }
+        if (menuTrigger) {
+          menuTrigger.style.opacity = "1";
+          menuTrigger.style.visibility = "visible";
+          menuTrigger.style.animation = "none";
+        }
+        if (topBtn) {
+          topBtn.style.opacity = "1";
+          topBtn.style.visibility = "visible";
+          topBtn.style.animation = "none";
+        }
+        if (scrollGuide) {
+          scrollGuide.style.opacity = "0.7";
+          scrollGuide.style.animation = "floatGuide 2.5s ease-in-out infinite";
+        }
+      }
+
+      // =========================
+      // 初回のみ
+      // =========================
+      else {
+        sessionStorage.setItem("hasOpened", "true");
+      }
+
+      // =====================================
+      // ハンバーガーメニュー
+      // =====================================
+      var globalMenu = document.querySelector(".global-menu");
+
+      if (menuTrigger && globalMenu) {
+        menuTrigger.addEventListener("click", function () {
+          menuTrigger.classList.toggle("active");
+          globalMenu.classList.toggle("active");
+        });
+      }
+
+      // =====================================
+      // TOPへ戻る
+      // =====================================
+      if (topBtn) {
+        topBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          if (menuTrigger && globalMenu) {
+            menuTrigger.classList.remove("active");
+            globalMenu.classList.remove("active");
+          }
+
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      }
+
+      // =====================================
+      // スクロールフェード
+      // =====================================
+      var fadeTargets = document.querySelectorAll(
+        ".log-text, .log-media, .content-main, .content-sub, .gallery-large, .gallery-thumb",
+      );
+
+      var fadeObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("show");
+            }
+          });
+        },
+        {
+          threshold: 0.25,
+        },
+      );
+
+      fadeTargets.forEach(function (target) {
+        fadeObserver.observe(target);
+      });
+
+      // =====================================
+      // スクロールスナップ
+      // =====================================
+      document
+        .querySelectorAll(".second-page-container, .log-section")
+        .forEach(function (section) {
+          section.style.scrollSnapAlign = "center";
+        });
+
+      var footer = document.querySelector(".site-footer");
+
+      if (footer) {
+        footer.style.scrollSnapAlign = "end";
+      }
+
+      document.body.style.scrollSnapType = "y proximity";
+      document.documentElement.style.scrollSnapType = "y proximity";
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,947 @@
+/* style.css 全文 */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: linear-gradient(to bottom, #050505 0%, #000000 30%, #0a0a0a 100%);
+  color: #fff;
+  font-family: "Shippori Mincho", "Tsukushi A Old Mincho", serif;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+}
+
+body.top-page .top-page-bg {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+/* ■ 動画の切り替え設定（スマホ用とPC用） */
+.bg-video.pc-only {
+  display: none;
+}
+
+.bg-video.sp-only {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .bg-video.pc-only {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .bg-video.sp-only {
+    display: none;
+  }
+}
+
+.top-visual {
+  width: 100%;
+  height: 100vh;
+}
+
+.top-overlay {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+
+.top-text-group {
+  opacity: 0;
+  animation: fadeInSchu 8s forwards 22s;
+}
+
+@keyframes fadeInSchu {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.top-title-en {
+  font-size: 42px;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.top-line-separator {
+  width: 180px;
+  height: 1px;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0));
+  margin: 8px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-line-separator::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60px;
+  width: 40px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  filter: blur(4px);
+  animation: shineMove 4s ease-in-out infinite;
+}
+
+@keyframes shineMove {
+  0% {
+    left: -60px;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  50% {
+    left: 200px;
+    opacity: 0.8;
+  }
+
+  100% {
+    left: 200px;
+    opacity: 0;
+  }
+}
+
+.top-title-jp {
+  font-size: 18px;
+  letter-spacing: 0.42em;
+  text-indent: 0.42em;
+  margin: 0;
+}
+
+.second-page-container {
+  position: relative;
+  z-index: 10;
+  margin-top: 0;
+  width: 100%;
+  min-height: 130vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arc-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 130vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  will-change: background-position;
+  transition: opacity 1s ease;
+}
+
+.arc-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.story-content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  background: transparent;
+  padding: 60px;
+  max-width: 800px;
+  margin-top: -180px;
+}
+
+.story-heading {
+  font-size: 32px;
+  margin-bottom: 45px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  font-family: "Times New Roman", serif;
+  font-weight: normal;
+}
+
+.story-description p {
+  font-size: 16px;
+  line-height: 2.5;
+  text-shadow: 1px 1px 8px #000;
+}
+
+.third-page-container,
+.fourth-page-container,
+.fifth-page-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./image/top-silyoukai/top-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.third-page-container::before,
+.fourth-page-container::before,
+.fifth-page-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.log-section {
+  width: 100%;
+  position: relative;
+  z-index: 20;
+  background-color: #020202;
+  padding: 150px 4%;
+  box-sizing: border-box;
+  min-height: 100vh;
+  scroll-snap-align: center;
+}
+
+.log-block {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8%;
+}
+
+.log-text img,
+.log-media img,
+.content-main img,
+.content-sub img,
+.gallery-large img,
+.gallery-thumb img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: contain;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  transition:
+    transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.8s ease;
+}
+
+.log-text img:hover,
+.log-media img:hover,
+.content-main img:hover,
+.content-sub img:hover,
+.gallery-large img:hover,
+.gallery-thumb img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+}
+
+.log-text,
+.log-media,
+.content-main,
+.content-sub,
+.gallery-large,
+.gallery-thumb {
+  flex: 1;
+  width: 50%;
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(10px);
+  transition:
+    opacity 1.5s ease,
+    transform 1.5s ease,
+    filter 1.5s ease;
+}
+
+.log-text.show,
+.log-media.show,
+.content-main.show,
+.content-sub.show,
+.gallery-large.show,
+.gallery-thumb.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+.log-text.show,
+.content-sub.show,
+.gallery-large.show {
+  transition-delay: 0.35s;
+}
+
+@media (max-width: 850px) {
+  .log-section {
+    padding: 80px 24px;
+  }
+
+  .log-block {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .log-text,
+  .log-media,
+  .content-main,
+  .content-sub,
+  .gallery-large,
+  .gallery-thumb {
+    width: 100%;
+  }
+}
+
+.site-footer {
+  width: 100%;
+  background-color: #000000;
+  padding: 120px 0;
+  position: relative;
+  z-index: 30;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-inner {
+  text-align: center;
+}
+
+.footer-inner .copyright {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+
+.site-header {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  z-index: 100000;
+}
+
+.menu-trigger {
+  display: block;
+  width: 50px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  animation: menuFadeIn26s 2s forwards 26s;
+}
+
+@keyframes menuFadeIn26s {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.menu-trigger span {
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: all 0.4s;
+}
+
+.menu-trigger span:nth-of-type(1) {
+  top: 0;
+  width: 100%;
+}
+
+.menu-trigger span:nth-of-type(2) {
+  bottom: 0;
+  width: 65%;
+}
+
+.global-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 99999;
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+  transform: translateY(-10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.global-menu.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.menu-list a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+  display: inline-block;
+  white-space: nowrap;
+  font-family: "Tsukushi Old Mincho", serif;
+}
+
+@media (min-width: 1025px) {
+  .global-menu {
+    left: auto;
+    right: 0;
+    width: 450px;
+    transform: translateX(20px);
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .global-menu.active {
+    transform: translateX(0);
+  }
+
+  .menu-list {
+    margin-right: auto;
+    margin-left: 0;
+    text-align: left;
+    padding-left: 60px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .global-menu {
+    justify-content: center;
+  }
+
+  .menu-list {
+    text-align: left;
+    padding: 0 40px;
+    margin: 0 auto;
+  }
+
+  .menu-list a {
+    white-space: normal;
+    font-size: 18px;
+  }
+}
+
+.to-top-btn {
+  position: fixed;
+  right: 40px;
+  bottom: 50px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid #fff;
+  padding: 12px 24px;
+  opacity: 0;
+  visibility: hidden;
+  animation: fadeInBtn 1s forwards;
+  animation-delay: 27s;
+  transition: all 0.4s ease;
+}
+
+a.to-top-btn,
+a.to-top-btn:visited {
+  color: #fff;
+  font-family: "Shippori Mincho", serif;
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  font-weight: 600;
+  text-decoration: none;
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+@keyframes fadeInBtn {
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.scroll-guide {
+  position: absolute;
+  bottom: -220px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  color: #fff;
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  opacity: 0;
+  animation:
+    fadeInGuide 2s forwards 26s,
+    floatGuide 2.5s ease-in-out infinite 28s;
+}
+
+@keyframes fadeInGuide {
+  to {
+    opacity: 0.7;
+  }
+}
+
+@keyframes floatGuide {
+  0% {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.top-sub-message {
+  position: absolute;
+  bottom: -320px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeInGuide 2s forwards 27s;
+}
+
+.page-hero {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 60px;
+  margin-bottom: 120px;
+  text-align: center;
+  box-sizing: border-box;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.myth-page .page-hero {
+  background-image: url("./image/bagu/haikei-kiiro.png");
+}
+
+.ooto-page .page-hero {
+  background-image: url("./image/bagu/haikei-konn.png");
+}
+
+.kishidake-page .page-hero {
+  background-image: url("./image/bagu/haikei-tilya.png");
+}
+
+.showa-page .page-hero {
+  background-image: url("./image/bagu/haikei-usutilya.png");
+}
+
+.sanpo-page .page-hero {
+  background-image: url("./image/bagu/haikei-aka.png");
+}
+
+.page-hero img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  margin-bottom: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.timeline-header {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
+.story-scene {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 60px 4%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.sub-page .menu-trigger {
+  opacity: 1;
+  visibility: visible;
+  animation: none;
+  right: 30px;
+}
+
+.intro-lead {
+  max-width: 680px;
+  margin: 50px auto 30px auto;
+  font-size: 16px;
+  line-height: 2.5;
+  letter-spacing: 0.12em;
+  text-align: justify;
+  text-indent: 1em;
+}
+
+.chapter-box {
+  display: block;
+  padding: 18px 18px;
+  color: white;
+  text-decoration: none;
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.45),
+      rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s ease;
+}
+
+.chapter-box:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.chapter-box h3 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+}
+
+.chapter-box p {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.7;
+  line-height: 1.8;
+}
+
+.chapter-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.next-chapters {
+  margin-top: 140px;
+  margin-bottom: 120px;
+}
+
+body.top-page .menu-trigger {
+  opacity: 0;
+  animation: menuFadeIn26s 2s forwards 26s;
+}
+
+body.top-page .to-top-btn {
+  opacity: 0;
+  animation: fadeInBtn 1s forwards;
+  animation-delay: 27s;
+}
+
+body.sub-page .menu-trigger,
+body.sub-page .to-top-btn {
+  opacity: 1;
+  animation: none;
+  visibility: visible;
+  position: fixed;
+  /* ← ここを追加！ */
+  z-index: 999;
+  /* ← ついでに一番手前に来るようにこれも追加しておくと安心です */
+}
+
+.page-bg-base {
+  display: none;
+}
+
+.menu-list a {
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.menu-list a:hover {
+  transform: scale(1.1);
+}
+
+.simple-right-img {
+  float: right;
+  width: 180px;
+  margin: 0 0 15px 20px;
+}
+
+.my-img {
+  float: right;
+  width: 50px;
+  height: auto;
+  margin: 0 0 10px 15px;
+}
+
+body.kishidake-page {
+  background: none;
+  background-color: #000;
+}
+
+.story-section h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 70px;
+  letter-spacing: .15em;
+  font-weight: normal;
+}
+
+.story-section h3 {
+  max-width: 760px;
+  margin: 60px auto 25px;
+  font-size: 22px;
+  font-weight: normal;
+  text-align: left;
+}
+
+.story-section p {
+  max-width: none;
+  margin: 0 0 28px;
+  text-align: left;
+  line-height: 2.4;
+}
+
+.story-section .gallery-top {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.story-section .gallery-top img {
+  width: 100%;
+  max-width: 900px;
+}
+
+.story-section .gallery-middle {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 50px auto;
+}
+
+.story-section .gallery-middle img {
+  width: 420px;
+}
+
+.story-section .gallery-bottom {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.story-section .gallery-bottom img {
+  width: 100%;
+  max-width: 900px;
+}
+
+.chapter-nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.chapter-link {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1.5px solid #fff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.16);
+  transition: color .25s, border-color .25s, background-color .25s;
+}
+
+.chapter-link:hover {
+  color: #111;
+  border-color: #c9a227;
+  background: #c9a227;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.reference-box {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.reference-box p {
+  font-size: 11px;
+  line-height: 1.9;
+  letter-spacing: 0.08em;
+}
+
+.reference-box h4 {
+  text-align: left;
+}
+
+.page-title h1 {
+  font-size: clamp(18px, 6vw, 48px);
+  line-height: 1.4;
+  padding: 0 10px;
+}
+
+.story-section {
+  max-width: 1100px;
+  margin: 100px auto 140px;
+  padding: 0 120px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .story-section {
+    max-width: 100%;
+    margin: 40px auto 80px;
+    padding: 0 15px;
+  }
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.log-media img,
+.gallery-large img,
+.gallery-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.news {
+  max-width: 900px;
+  margin: 80px auto;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.news h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  letter-spacing: 0.1em;
+}
+
+.news p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  color: #fcfafaf3;
+}
+
+.news-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.news-list li {
+  font-size: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.news-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .news {
+    margin: 40px auto;
+    padding: 20px;
+  }
+
+  .news h2 {
+    font-size: 20px;
+  }
+
+  .news p {
+    font-size: 14px;
+  }
+
+  .news-list li {
+    font-size: 12px;
+  }
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #cccccc;
+}

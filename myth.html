@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Saga Log - 昔聞いたあの話</title>
+  <meta name="description" content="地域に伝わる昔話や言い伝えを紹介し、土地に残る記憶をたどるThe Saga Logの記事です。">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="myth.css" />
+</head>
+
+<body class="sub-page myth-page">
+  <div class="page-bg-base"></div>
+  <nav class="global-menu">
+    <ul class="menu-list">
+      <li><a href="index.html">TOPページ</a></li>
+      <li><a href="myth.html">1.昔聞いたあの話、実はね・・・</a></li>
+      <li><a href="ooto.html">2.鳥巣に眠る 「オオト様」とは</a></li>
+      <li><a href="kishidake.html">3.岸岳城と波多氏、消えた武士の記憶</a></li>
+      <li><a href="showa.html">4.昭和あの頃、祖父と歩いた日々</a></li>
+      <li><a href="sanpo.html">5.歴史の風を聴く史跡を巡って</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-hero">
+    <header class="site-header">
+      <div class="menu-trigger">
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <img src="./image/myth/pe-jitop.png" alt="桃太郎・金太郎・浦島太郎・かぐや姫イメージ画像" />
+
+    <div class="page-title">
+      <h1>昔聞いたあの話、実はね・・・</h1>
+      <p class="intro-lead">
+        　はじめまして、管理人のしゅうです。
+
+        誰もが子供の頃に聞いたあの昔話には、実はおもしろい裏の話がいっぱいあるんですよ。
+        桃太郎、浦島太郎、かぐや姫、金太郎。物語の背景には、当時の人たちがどんな場所で、
+        どんな風に生きていたのか、そんな歴史のヒントが隠されているかもしれません。
+
+        物語の登場人物たちが 背負っていた時代や、少し意外な素顔に触れる解説コーナー「実はね・・・」
+         <br>伝承の裏側に隠された物語の向こう側を、少し覗いてみませんか？
+      </p>
+    </div>
+    <section class="next-chapters">
+      <h2>昔ばなし</h2>
+      <p>見たい話しを選んでください</p>
+      <div class="chapter-grid">
+        <a href="myth/momotaro.html" class="chapter-box">
+          <h3>1. 桃太郎</h3>
+          <p>鬼はいたのか</p>
+        </a>
+
+        <a href="myth/urashima.html" class="chapter-box">
+          <h3>2. 浦島太郎</h3>
+          <p>やさしさの代償</p>
+        </a>
+
+        <a href="myth/kaguya.html" class="chapter-box">
+          <h3>3. かぐや姫</h3>
+          <p>地上の追憶</p>
+        </a>
+
+        <a href="myth/kintaro.html" class="chapter-box">
+          <h3>4. 金太郎</h3>
+          <p>物語から生まれた武士</p>
+        </a>
+      </div>
+    </section>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="copyright">&copy; 2026 The Saga Log. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <a href="#" class="to-top-btn">▲ TOPに戻る</a>
+
+  <script>
+    var menuTrigger = document.querySelector(".menu-trigger");
+    var globalMenu = document.querySelector(".global-menu");
+
+    if (menuTrigger && globalMenu) {
+      menuTrigger.addEventListener("click", function () {
+        menuTrigger.classList.toggle("active");
+        globalMenu.classList.toggle("active");
+      });
+    }
+
+    var topBtn = document.querySelector(".to-top-btn");
+    if (topBtn) {
+      topBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        if (menuTrigger && globalMenu) {
+          menuTrigger.classList.remove("active");
+          globalMenu.classList.remove("active");
+        }
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
+  </script>
+</body>
+
+</html>
