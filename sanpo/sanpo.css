@@ -863,7 +863,13 @@ h2{
   text-align: center;
 }
 @media (max-width: 768px){
-  .page-guide{
-    text-align: center;
-  }
+
+.page-guide,
+.page-guide p,
+.page-guide h2{
+
+text-align: center;
+
+}
+
 }
