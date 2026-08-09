@@ -862,3 +862,8 @@ footer{
 h2{
   text-align: center;
 }
+@media (max-width: 768px){
+  .page-guide{
+    text-align: center;
+  }
+}
