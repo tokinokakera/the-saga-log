@@ -832,4 +832,22 @@ body.showa1-page .page-hero {
     text-align: left;
   }
 }
+ .next-chapters,  h2 {
+    text-align: center;
+  }
+/* showa配下だけ（ページ共通CSSに追記） */
+@media (max-width: 768px){
 
+  /* ボタンっぽいh2含め、見出しは中央 */
+  body h2{
+    text-align: center;
+  }
+
+  /* フッター中央寄せ（右寄り対策） */
+  body footer{
+    text-align: center;
+  }
+  body footer *{
+    text-align: center;
+  }
+}
