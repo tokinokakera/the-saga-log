@@ -11,6 +11,7 @@ body {
   scroll-behavior: smooth;
   scrollbar-gutter: stable;
 }
+
 body.top-page .top-page-bg {
   opacity: 1;
   transition: opacity 0.5s ease;
@@ -30,6 +31,7 @@ body.top-page .top-page-bg {
   width: 100%;
   height: 100vh;
 }
+
 .top-overlay {
   position: absolute;
   top: 38%;
@@ -49,6 +51,7 @@ body.top-page .top-page-bg {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
@@ -64,12 +67,10 @@ body.top-page .top-page-bg {
 .top-line-separator {
   width: 180px;
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0));
   margin: 8px auto;
   position: relative;
   overflow: hidden;
@@ -92,13 +93,16 @@ body.top-page .top-page-bg {
     left: -60px;
     opacity: 0;
   }
+
   20% {
     opacity: 1;
   }
+
   50% {
     left: 200px;
     opacity: 0.8;
   }
+
   100% {
     left: 200px;
     opacity: 0;
@@ -147,6 +151,7 @@ body.top-page .top-page-bg {
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
+
 .story-content {
   position: relative;
   z-index: 10;
@@ -157,6 +162,7 @@ body.top-page .top-page-bg {
   margin-top: -180px;
   /* 演出用の opacity, filter, transform, transition はすべて消す */
 }
+
 .story-heading {
   font-size: 32px;
   margin-bottom: 45px;
@@ -284,10 +290,12 @@ body.top-page .top-page-bg {
   .log-section {
     padding: 80px 24px;
   }
+
   .log-block {
     flex-direction: column;
     gap: 40px;
   }
+
   .log-text,
   .log-media,
   .content-main,
@@ -306,9 +314,11 @@ body.top-page .top-page-bg {
   z-index: 30;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 .footer-inner {
   text-align: center;
 }
+
 .footer-inner .copyright {
   font-size: 11px;
   color: rgba(255, 255, 255, 0.4);
@@ -322,6 +332,7 @@ body.top-page .top-page-bg {
   right: 40px;
   z-index: 100000;
 }
+
 .menu-trigger {
   display: block;
   width: 40px;
@@ -332,16 +343,19 @@ body.top-page .top-page-bg {
   visibility: hidden;
   animation: menuFadeIn26s 2s forwards 26s;
 }
+
 @keyframes menuFadeIn26s {
   0% {
     opacity: 0;
     visibility: hidden;
   }
+
   100% {
     opacity: 1;
     visibility: visible;
   }
 }
+
 .menu-trigger span {
   display: block;
   position: absolute;
@@ -350,10 +364,12 @@ body.top-page .top-page-bg {
   background-color: rgba(255, 255, 255, 0.7);
   transition: all 0.4s;
 }
+
 .menu-trigger span:nth-of-type(1) {
   top: 0;
   width: 100%;
 }
+
 .menu-trigger span:nth-of-type(2) {
   bottom: 0;
   width: 65%;
@@ -377,11 +393,13 @@ body.top-page .top-page-bg {
   align-items: center;
   justify-content: center;
 }
+
 .global-menu.active {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
 }
+
 .menu-list {
   list-style: none;
   padding: 0;
@@ -390,6 +408,7 @@ body.top-page .top-page-bg {
   flex-direction: column;
   gap: 30px;
 }
+
 .menu-list a {
   color: #fff;
   text-decoration: none;
@@ -410,9 +429,11 @@ body.top-page .top-page-bg {
     justify-content: flex-start;
     align-items: center;
   }
+
   .global-menu.active {
     transform: translateX(0);
   }
+
   .menu-list {
     margin-right: auto;
     margin-left: 0;
@@ -421,15 +442,18 @@ body.top-page .top-page-bg {
     padding-right: 40px;
   }
 }
+
 @media (max-width: 1024px) {
   .global-menu {
     justify-content: center;
   }
+
   .menu-list {
     text-align: left;
     padding: 0 40px;
     margin: 0 auto;
   }
+
   .menu-list a {
     white-space: normal;
     font-size: 18px;
@@ -450,6 +474,7 @@ body.top-page .top-page-bg {
   animation-delay: 27s;
   transition: all 0.4s ease;
 }
+
 a.to-top-btn,
 a.to-top-btn:visited {
   color: #fff;
@@ -460,6 +485,7 @@ a.to-top-btn:visited {
   text-decoration: none;
   text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.9);
 }
+
 @keyframes fadeInBtn {
   to {
     opacity: 1;
@@ -481,22 +507,27 @@ a.to-top-btn:visited {
     fadeInGuide 2s forwards 26s,
     floatGuide 2.5s ease-in-out infinite 28s;
 }
+
 @keyframes fadeInGuide {
   to {
     opacity: 0.7;
   }
 }
+
 @keyframes floatGuide {
   0% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(10px);
   }
+
   100% {
     transform: translateX(-50%) translateY(0);
   }
 }
+
 .top-sub-message {
   position: absolute;
   bottom: -320px;
@@ -523,6 +554,7 @@ a.to-top-btn:visited {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 /* 現在の設定を活かしつつ、チャプター専用の背景を追加 */
 
 .era-1 {
@@ -548,6 +580,7 @@ a.to-top-btn:visited {
   background-size: cover;
   background-position: center;
 }
+
 .page-hero img {
   width: 800px;
   max-width: 100%;
@@ -555,6 +588,7 @@ a.to-top-btn:visited {
   display: block;
   margin: 0 auto 60px;
 }
+
 .timeline-header {
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -562,6 +596,7 @@ a.to-top-btn:visited {
   padding: 15px 0;
   margin-top: 40px;
 }
+
 .story-scene {
   max-width: 1000px;
   margin-left: auto;
@@ -578,6 +613,7 @@ a.to-top-btn:visited {
   visibility: visible;
   animation: none;
 }
+
 .intro-lead {
   max-width: 680px;
   margin: 50px auto 30px auto;
@@ -587,35 +623,38 @@ a.to-top-btn:visited {
   text-align: justify;
   text-indent: 1em;
 }
+
 .chapter-box {
   display: block;
   padding: 18px 18px;
   color: white;
   text-decoration: none;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.45),
-    rgba(255, 255, 255, 0.03)
-  );
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.45),
+      rgba(255, 255, 255, 0.03));
   border: 1px solid rgba(255, 255, 255, 0.25);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   transition: all 0.4s ease;
 }
+
 .chapter-box:hover {
   background: rgba(255, 255, 255, 0.08);
   transform: translateY(-3px) scale(1.02);
   border-color: rgba(255, 255, 255, 0.5);
 }
+
 .chapter-box h3 {
   margin: 0 0 8px 0;
   font-size: 16px;
 }
+
 .chapter-box p {
   margin: 0;
   font-size: 12px;
   opacity: 0.7;
   line-height: 1.8;
 }
+
 .chapter-grid {
   max-width: 900px;
   margin: 0 auto;
@@ -624,19 +663,23 @@ a.to-top-btn:visited {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
+
 .next-chapters {
   margin-top: 140px;
   margin-bottom: 120px;
 }
+
 body.top-page .menu-trigger {
   opacity: 0;
   animation: menuFadeIn26s 2s forwards 26s;
 }
+
 body.top-page .to-top-btn {
   opacity: 0;
   animation: fadeInBtn 1s forwards;
   animation-delay: 27s;
 }
+
 body.sub-page .menu-trigger,
 body.sub-page .to-top-btn {
   opacity: 1;
@@ -647,26 +690,37 @@ body.sub-page .to-top-btn {
 .page-bg-base {
   display: none;
 }
+
 /* メニューのリンクにポインターを乗せた時に少し大きくする */
 .menu-list a {
-  transition: transform 0.3s ease; /* 動きを滑らかにする設定 */
-  display: inline-block; /* 動きを適用するために必要 */
+  transition: transform 0.3s ease;
+  /* 動きを滑らかにする設定 */
+  display: inline-block;
+  /* 動きを適用するために必要 */
 }
 
 .menu-list a:hover {
-  transform: scale(1.1); /* ポインターが近づくと1.1倍に拡大 */
+  transform: scale(1.1);
+  /* ポインターが近づくと1.1倍に拡大 */
 }
+
 .simple-right-img {
-  float: right; /* 右に寄せる */
-  width: 180px; /* ここを小さくすればサイズも小さくなります */
-  margin: 0 0 15px 20px; /* 上下左右の余白（文字と被らないように） */
+  float: right;
+  /* 右に寄せる */
+  width: 180px;
+  /* ここを小さくすればサイズも小さくなります */
+  margin: 0 0 15px 20px;
+  /* 上下左右の余白（文字と被らないように） */
 }
+
 .my-img {
   float: right;
-  width: 50px; /* ここをさらに小さくすればもっと小さくなります */
+  width: 50px;
+  /* ここをさらに小さくすればもっと小さくなります */
   height: auto;
   margin: 0 0 10px 15px;
 }
+
 .scroller {
   width: 90%;
   margin: 40px auto;
@@ -685,7 +739,7 @@ body.sub-page .to-top-btn {
 }
 
 .scroller-inner li {
-  background: rgba(60,45,25,0.85);
+  background: rgba(60, 45, 25, 0.85);
   border: 1px solid #b89b62;
   padding: 12px 25px;
   border-radius: 8px;
@@ -694,13 +748,14 @@ body.sub-page .to-top-btn {
   white-space: nowrap;
   cursor: pointer;
   transition: 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .scroller-inner li:hover {
   background: #b89b62;
   color: #3b2a16;
 }
+
 .scroller-inner a,
 .scroller-inner a:visited {
   color: inherit;
@@ -713,27 +768,38 @@ body.sub-page .to-top-btn {
   transform: scale(1.08);
   box-shadow: 0 0 8px rgba(255, 223, 100, 0.25);
 }
+
 @keyframes scroll-left {
   from {
     transform: translateX(0);
   }
+
   to {
     transform: translateX(-50%);
   }
 }
+
 /* それぞれのボックスに「テーマカラー」を持たせる */
 .chapter-box.era1 {
   border-left: 5px solid #fde8d0;
-} /* 薄卵色 */
+}
+
+/* 薄卵色 */
 .chapter-box.era2 {
   border-left: 5px solid #43676b;
-} /* 御召茶 */
+}
+
+/* 御召茶 */
 .chapter-box.era3 {
   border-left: 5px solid #d9a40e;
-} /* 金茶 */
+}
+
+/* 金茶 */
 .chapter-box.era4 {
   border-left: 5px solid #827e74;
-} /* 滅窶色 */
+}
+
+/* 滅窶色 */
 .reference-box {
   margin-top: 60px;
   padding-top: 25px;
@@ -741,6 +807,7 @@ body.sub-page .to-top-btn {
   text-align: center;
   opacity: 0.65;
 }
+
 .reference-box h3 {
   font-size: 14px;
   letter-spacing: 0.15em;
@@ -752,26 +819,33 @@ body.sub-page .to-top-btn {
   line-height: 1.9;
   letter-spacing: 0.08em;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 .fragment-note {
-  max-width: 800px;   /* 文字幅を狭くする */
-  margin: 80px auto;  /* 中央配置 */
+  max-width: 800px;
+  /* 文字幅を狭くする */
+  margin: 80px auto;
+  /* 中央配置 */
   padding: 0 20px;
-  text-align: left;   /* 文字は左揃え */
+  text-align: left;
+  /* 文字は左揃え */
   line-height: 2;
 }
+
 .fragment-note {
-    scroll-margin-top: 100px;
+  scroll-margin-top: 100px;
 }
 
 /* 準備中バッジ用 */
-.chapter-box{
-  position: relative; /* バッジの基準点 */
+.chapter-box {
+  position: relative;
+  /* バッジの基準点 */
 }
 
-.chapter-box .coming-badge{
+.chapter-box .coming-badge {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -780,96 +854,128 @@ html {
   padding: 3px 10px;
   border-radius: 999px;
 
-  color: rgba(255,255,255,0.85);
-  background: rgba(0,0,0,0.55);
-  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.22);
 
-  pointer-events: none; /* バッジがクリックを邪魔しない */
+  pointer-events: none;
+  /* バッジがクリックを邪魔しない */
 }
 
 /* 準備中の見た目を少しだけ控えめに（任意） */
-.chapter-box.is-coming{
+.chapter-box.is-coming {
   opacity: 0.88;
 }
-.chapter-box.is-coming:hover{
-  transform: translateY(-2px) scale(1.01); /* ホバーを弱める（任意） */
-}
-body.top-page .chapter-box{ position: relative; }
 
-body.top-page .chapter-box .coming-badge{
-  position:absolute;
-  top:12px; right:12px;
+.chapter-box.is-coming:hover {
+  transform: translateY(-2px) scale(1.01);
+  /* ホバーを弱める（任意） */
+}
+
+body.top-page .chapter-box {
+  position: relative;
+}
+
+body.top-page .chapter-box .coming-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
   /* 以下略 */
 }
-.chapter-box{
-  min-height: 92px;         /* ここは見た目で調整 */
+
+.chapter-box {
+  min-height: 92px;
+  /* ここは見た目で調整 */
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.chapter-box h3{
+
+.chapter-box h3 {
   line-height: 1.4;
 }
-.chapter-box.is-coming{
+
+.chapter-box.is-coming {
   opacity: 0.6;
   cursor: default;
 }
 
-.chapter-box.is-coming:hover{
+.chapter-box.is-coming:hover {
   transform: none;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.45),
-    rgba(255, 255, 255, 0.03)
-  );
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.45),
+      rgba(255, 255, 255, 0.03));
   border-color: rgba(255, 255, 255, 0.25);
 }
-blockquote{ margin-left: 0; margin-right: 0; }
+
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* セクション全体をページ中央に配置（枠の中央寄せ） */
-.additional-story.fragment-note{
-  max-width: 900px;   /* 好きな幅に調整 */
+.additional-story.fragment-note {
+  max-width: 900px;
+  /* 好きな幅に調整 */
   margin: 0 auto;
   padding: 0 16px;
 }
 
 /* 見出しを中央揃え */
-.additional-story.fragment-note h2{
+.additional-story.fragment-note h2 {
   text-align: center;
 }
 
 /* 本文（文書）を中央揃え */
-.additional-story.fragment-note p{
+.additional-story.fragment-note p {
   text-align: center;
 }
+
 /* 画面幅が 768px以下のとき（スマホサイズ）だけ適用する */
 @media (max-width: 768px) {
+
   /* 左揃えにしたい要素のセレクタ（クラス名やタグ名）を指定する */
-  .sample-text, p, h2 {
+  .sample-text,
+  p,
+  h2 {
     text-align: left;
   }
 }
+
 /* スマホサイズ（例: 768px以下）のとき */
 @media (max-width: 768px) {
+
   /* 文章を囲んでいるボックス自体を左揃えにする */
   .scene-text {
     text-align: left;
   }
 }
+
 .site-footer,
-footer{
+footer {
   text-align: center;
 }
-h2{
+
+h2 {
   text-align: center;
 }
-@media (max-width: 768px){
 
-.page-guide,
-.page-guide p,
-.page-guide h2{
+@media (max-width: 768px) {
 
-text-align: center;
+  .page-guide,
+  .page-guide p,
+  .page-guide h2 {
+
+    text-align: center;
+
+  }
 
 }
 
+.site-footer p,
+footer p {
+  text-align: center;
+}
+.page-guide {
+  margin-top: 30px;
 }
