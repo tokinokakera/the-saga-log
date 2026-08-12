@@ -960,3 +960,11 @@ html {
 .site-footer a:hover {
   color: #cccccc;
 }
+.footer-inner .site-summary {
+  font-size: 0.6rem;
+  color: #777;
+  max-width: 600px;  /* 文章の最大幅を制限 */
+  margin: 0 auto;    /* 中央に配置 */
+  padding: 0 20px;   /* 左右に余白を持たせて端に付かないようにする */
+  line-height: 1.5;
+}
