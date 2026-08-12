@@ -5,12 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
- <!-- Google検索用 -->
-<title>The Saga Log</title>
-<meta name="description" content="The Saga Logは、佐賀や大宰府の歴史、岸岳城と松浦党、地域に残る昔話、歴史散歩、昭和の記憶を通して、時代の物語を綴る歴史サイトです。">
+  <!-- Google検索用 -->
+  <title>The Saga Log</title>
+  <meta name="description" content="The Saga Logは、佐賀や大宰府の歴史、岸岳城と松浦党、地域に残る昔話、歴史散歩、昭和の記憶を通して、時代の物語を綴る歴史サイトです。">
 
-<link rel="stylesheet" href="style.css" />
-<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet" /><style>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600&display=swap" rel="stylesheet" />
+  <style>
     /* ■ 背景画像の設定 */
     .top-page-bg {
       position: fixed;
@@ -53,8 +54,8 @@
     }
 
     /* ===================================================
-       ■ スマホ用（デフォルト）：12秒動画に合わせた早いタイミング
-       =================================================== */
+      ■ スマホ用（デフォルト）：12秒動画に合わせた早いタイミング
+      =================================================== */
     body.top-page .top-text-group {
       opacity: 0;
       animation: fadeInSchu 2s forwards 13s;
@@ -71,6 +72,7 @@
 
     body.top-page .scroll-guide {
       animation: fadeInGuide 1s forwards 11s, floatGuide 2.5s ease-in-out infinite 14s;
+      /* ←ここが11秒になってる */
     }
 
 
@@ -116,6 +118,13 @@
       <span></span>
     </div>
   </header>
+
+  <!-- パソコン用動画（22秒〜26秒用） -->
+  <video class="bg-video pc-only" src="./image/top-silyoukai/opening.mp4" autoplay muted playsinline></video>
+  <!-- スマホ用動画（12秒用）※ファイル名は実際のスマホ用動画名に合わせてください -->
+  <video class="bg-video sp-only" src="./image/top-silyoukai/sumaho1.mp4" autoplay muted playsinline></video>
+
+  <section class="top-visual"></section>
 
   <!-- パソコン用動画（22秒〜26秒用） -->
   <video class="bg-video pc-only" src="./image/top-silyoukai/opening.mp4" autoplay muted playsinline></video>
@@ -225,18 +234,22 @@
     </ul>
   </section>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSctAhuqQTCR8l1HyKksbBrqrMtIfIbyeySPfxfxxpP1K0Y66A/viewform"
-          target="_blank">
-          ご意見・お問い合わせ
-        </a>
-      </p>
+ <footer class="site-footer">
+  <div class="footer-inner">
+    <p class="site-summary">
+      The Saga Log｜佐賀・岸岳城と松浦党、オオト様、大宰府の歴史、昔話、歴史散歩、昭和の記憶を綴る記録サイト
+    </p>
 
-      <p class="copyright">&copy; 2026 The Saga Log. All Rights Reserved.</p>
-    </div>
-  </footer>
+    <p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSctAhuqQTCR8l1HyKksbBrqrMtIfIbyeySPfxfxxpP1K0Y66A/viewform"
+         target="_blank" rel="noopener">
+        ご意見・お問い合わせ
+      </a>
+    </p>
+
+    <p class="copyright">&copy; 2026 The Saga Log. All Rights Reserved.</p>
+  </div>
+</footer>
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {

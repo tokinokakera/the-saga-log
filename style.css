@@ -515,40 +515,55 @@ a.to-top-btn:visited {
   }
 }
 
-.scroll-guide {
-  position: absolute;
-  bottom: -220px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  color: #fff;
-  font-size: 12px;
-  letter-spacing: 0.3em;
-  opacity: 0;
-  animation:
-    fadeInGuide 2s forwards 26s,
-    floatGuide 2.5s ease-in-out infinite 28s;
-}
+/* ===================================================
+      ■ スクロール案内の基本設定（最初から見えなくしておく）
+      =================================================== */
+   .scroll-guide {
+     position: absolute;
+     bottom: -220px;
+     left: 50%;
+     transform: translateX(-50%);
+     z-index: 10;
+     color: #fff;
+     font-size: 12px;
+     letter-spacing: 0.3em;
+     opacity: 0;
+     visibility: hidden; /* ← 最初にパッと出ないように隠す */
+   }
 
-@keyframes fadeInGuide {
-  to {
-    opacity: 0.7;
-  }
-}
+   @keyframes fadeInGuide {
+     to {
+       opacity: 0.7;
+       visibility: visible; /* ← フェードインする時に表示に切り替える */
+     }
+   }
 
-@keyframes floatGuide {
-  0% {
-    transform: translateX(-50%) translateY(0);
-  }
+   @keyframes floatGuide {
+     0% {
+       transform: translateX(-50%) translateY(0);
+     }
+     50% {
+       transform: translateX(-50%) translateY(10px);
+     }
+     100% {
+       transform: translateX(-50%) translateY(0);
+     }
+   }
+   /* ===================================================
+      ■ スマホ用（デフォルト）：タイトル後（14秒目）に出す
+      =================================================== */
+   body.top-page .scroll-guide {
+     animation: fadeInGuide 1s forwards 14s, floatGuide 2.5s ease-in-out infinite 15s;
+   }
 
-  50% {
-    transform: translateX(-50%) translateY(10px);
-  }
-
-  100% {
-    transform: translateX(-50%) translateY(0);
-  }
-}
+   /* ===================================================
+      ■ パソコン用（画面幅768px以上）：26秒目に出す
+      =================================================== */
+   @media (min-width: 768px) {
+     body.top-page .scroll-guide {
+       animation: fadeInGuide 2s forwards 26s, floatGuide 2.5s ease-in-out infinite 28s;
+     }
+   }
 
 .top-sub-message {
   position: absolute;
