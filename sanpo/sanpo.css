@@ -838,7 +838,7 @@ html {
 .fragment-note {
   scroll-margin-top: 100px;
 }
-
+#tenpai{ scroll-margin-top: 100px; }
 /* 準備中バッジ用 */
 .chapter-box {
   position: relative;
